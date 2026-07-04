@@ -8,6 +8,8 @@ The code is intended to accompany a public dataset release. It shows how to conn
 - side-specific JSON annotation files, such as `L-label.json` and `R-label.json`;
 - 3D bounding boxes represented as a 2D rectangle plus an axial DICOM slice range.
 
+![TMJ CBCT label examples](tmj_label_examples_montage.png)
+
 ## Dataset Structure Expected By The Code
 
 The scripts expect one folder per sample:
