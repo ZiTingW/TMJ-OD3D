@@ -80,6 +80,7 @@ conda run -n base python ...
 | --- | --- |
 | `tmj_dataset_read_example.py` | Reads one sample and prints raw CBCT/DICOM information plus parsed annotation boxes. |
 | `tmj_dataset_viewer.py` | Exports PNG images with bounding boxes drawn on reference or requested DICOM slices. |
+| `make_label_examples_montage.py` | Creates a GitHub-ready montage with one real CBCT example for each label category. |
 | `TMJ_DATASET_USAGE.md` | Short usage-focused guide with code snippets. |
 | `test_tmj_dataset_viewer.py` | Unit and smoke tests for parsing, DICOM indexing, reading, and visualization. |
 | `requirements.txt` | Minimal Python dependency list. |
@@ -154,6 +155,22 @@ This draws only boxes whose 3D slice range contains DICOM `InstanceNumber` 315.
 
 Use `--side L` or `--side R` to filter one TMJ side. Use `--class-filter 1,3,5` to draw only selected disease categories.
 
+## Example 4: Create A GitHub Homepage Label Montage
+
+Run:
+
+```powershell
+conda run -n base python make_label_examples_montage.py `
+  --dataset-root E:\tmj `
+  --output tmj_label_examples_montage.png `
+  --manifest tmj_label_examples_manifest.csv `
+  --seed 20260704
+```
+
+This creates one combined PNG with one real reference-slice example for each category `0-6`. The script prefers single-class annotations for each category and writes a CSV manifest recording the selected sample, side, slice range, reference DICOM, and bounding box.
+
+The PNG is suitable for placing near the top of a GitHub README to show the dataset label categories.
+
 ## Output Files
 
 `tmj_dataset_viewer.py` writes:
@@ -165,6 +182,11 @@ Use `--side L` or `--side R` to filter one TMJ side. Use `--class-filter 1,3,5` 
 `tmj_dataset_read_example.py` optionally writes:
 
 - a JSON summary with volume-level DICOM information and one record per annotation box.
+
+`make_label_examples_montage.py` writes:
+
+- one combined PNG label-category overview;
+- an optional CSV manifest describing the examples used in the montage.
 
 ## Programmatic Use
 
