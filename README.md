@@ -1,6 +1,6 @@
 # TMJ-OD3D CBCT Dataset Utilities
 
-This repository provides example code for reading and visualizing a TMJ CBCT dataset with side-specific 3D bounding-box annotations of osseous abnormalities.
+This repository provides example code for reading and visualizing a TMJ CBCT dataset (https://www.scidb.cn/en/detail?dataSetId=216729be97a34b249d26da500bd5d9d9) with side-specific 3D bounding-box annotations of osseous abnormalities.
 
 The code is intended to accompany a public dataset release. It shows how to connect three parts of the dataset:
 
