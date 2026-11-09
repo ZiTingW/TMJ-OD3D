@@ -1,5 +1,10 @@
 # TMJ-OD3D CBCT Dataset Utilities
 
+Citation
+
+Zhang, W., Wen, Z., Zhou, Y. et al. A cone-beam computed tomography dataset for three-dimensional detection of temporomandibular joint osseous abnormalities. Sci Data (2026). https://doi.org/10.1038/s41597-026-08592-3    
+https://www.nature.com/articles/s41597-026-08592-3#citeas
+
 This repository provides example code for reading and visualizing a TMJ CBCT dataset (https://www.scidb.cn/en/detail?dataSetId=216729be97a34b249d26da500bd5d9d9) with side-specific 3D bounding-box annotations of osseous abnormalities.
 
 The code is intended to accompany a public dataset release. It shows how to connect three parts of the dataset:
